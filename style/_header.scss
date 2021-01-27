@@ -1,0 +1,67 @@
+header {
+  width: 100%;
+  height: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .logo {
+    img {
+      width: 11.875rem;
+      height: 2.188rem;
+    }
+  }
+
+  .mobileMenue {
+    @include breakpoint-up(medium) {
+      display: none;
+    }
+    .icon {
+      width: 2.188rem;
+      height: 1.5rem;
+      cursor: pointer;
+      .bar {
+        display: block;
+        width: 100%;
+        height: 0.188rem;
+        background-color: $white;
+        transform-origin: 2px 2px;
+        transition: all 0.2s ease-in-out;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+      &.active {
+        .bar:first-child {
+          transform: rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .desktopMenue {
+    @include breakpoint-down(small) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    list-style: none;
+    a {
+      text-decoration: none;
+      font-family: $alata;
+      font-weight: 400;
+      color: $white;
+    }
+  }
+}
