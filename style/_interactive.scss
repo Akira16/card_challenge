@@ -1,0 +1,44 @@
+.interactive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 7.188rem 2rem;
+  .img {
+    width: 100%;
+    height: 18.125rem;
+    background: url(../../images/mobile/image-interactive.jpg) no-repeat
+      center/cover;
+  }
+  .content {
+    background: $white;
+    padding-bottom: 7.938rem;
+    .headline {
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: $black;
+      margin: 2.5rem 0;
+    }
+    .subtext {
+      font-size: 0.875rem;
+      color: $darkGray;
+    }
+  }
+
+  @include breakpoint-up(medium) {
+    display: block;
+    padding: 10.313rem 10.313rem 0 10.313rem !important;
+    position: relative;
+    .img {
+      width: 45.625rem;
+      height: 31.25rem;
+      background: url("../../images/desktop/image-interactive.jpg");
+    }
+    .content {
+      width: 40.625rem;
+      height: 25.938rem;
+      padding: 6.25rem;
+      transform: translate(65%, -70%);
+    }
+  }
+}
