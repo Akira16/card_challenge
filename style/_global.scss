@@ -7,6 +7,10 @@
   font-family: $alata;
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 .container {
   padding: 0 2rem;
   @include breakpoint-up(medium) {
